@@ -1,0 +1,55 @@
+{
+  "company": "Emaar Properties PJSC",
+  "fiscal_year": 2025,
+  "unit": "AED thousand",
+  "revenue_current": {
+    "label_in_document": "Revenue",
+    "value": 49557263,
+    "pdf_page": 167,
+    "printed_page": "165"
+  },
+  "revenue_prior": {
+    "label_in_document": "Revenue",
+    "value": 35504920,
+    "pdf_page": 167,
+    "printed_page": "165"
+  },
+  "profit_before_tax": {
+    "label_in_document": "PROFIT BEFORE TAX",
+    "value": 25656434,
+    "pdf_page": 167,
+    "printed_page": "165"
+  },
+  "finance_costs": {
+    "label_in_document": "Finance costs",
+    "value": 1028146,
+    "pdf_page": 167,
+    "printed_page": "165"
+  },
+  "finance_income": {
+    "label_in_document": "Finance income",
+    "value": 2812580,
+    "pdf_page": 167,
+    "printed_page": "165"
+  },
+  "net_profit": {
+    "label_in_document": "NET PROFIT FOR THE YEAR",
+    "value": 22325535,
+    "pdf_page": 167,
+    "printed_page": "165"
+  },
+  "depreciation_amortisation": [
+    {
+      "label_in_document": "Depreciation (including right-of use assets)",
+      "value": 1634920,
+      "pdf_page": 170,
+      "printed_page": "168"
+    },
+    {
+      "label_in_document": "Amortisation of intangible assets",
+      "value": 53760,
+      "pdf_page": 170,
+      "printed_page": "168"
+    }
+  ]
+}

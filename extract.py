@@ -1,12 +1,12 @@
 import os
 import json
+import time
 from pathlib import Path
-from typing import Optional
+from typing import Optional, Literal
 from dotenv import load_dotenv
 from google import genai
-from pydantic import BaseModel
-import time
 from google.genai import errors
+from pydantic import BaseModel
 
 load_dotenv()
 client = genai.Client(api_key=os.environ["GEMINI_API_KEY"])
@@ -22,13 +22,14 @@ class LineItem(BaseModel):
 
 
 class RawFinancials(BaseModel):
-    unit: str
+    currency: str
+    scale: Literal["units", "thousands", "millions"]
     # Income statement
     revenue_current: LineItem
     revenue_prior: LineItem
     profit_before_tax: LineItem
     finance_costs: LineItem
-    finance_income: LineItem
+    finance_income: Optional[LineItem] = None
     net_profit: LineItem
     net_profit_attributable_to_owners: LineItem
     # Cash flow statement
@@ -52,26 +53,35 @@ PROMPT = (
     "calculate, combine or estimate anything: only copy values exactly as "
     "printed. Report every value as a positive number (ignore parentheses), "
     "except operating_cash_flow, which must be negative if it is a net outflow. "
-    "Write the unit exactly as 'AED thousand'. "
+    "For currency, give the ISO code of the presentation currency (e.g. AED, "
+    "SAR). For scale, state whether amounts are presented in units, thousands "
+    "or millions, as the column headers of the statements say. Keep every "
+    "value exactly as printed, in that scale. "
+    "For net_profit, use the total profit for the year after tax, not gross "
+    "profit and not profit from continuing operations only. "
+    "If there is no separate finance income line, return null for "
+    "finance_income. "
     "For depreciation_amortisation, list every depreciation and amortisation "
     "line from the adjustments section of the consolidated statement of cash "
     "flows, one entry per line. "
-    "For borrowings, list every borrowing, bank loan and sukuk line (both "
-    "current and non-current) from the consolidated statement of financial "
-    "position, one entry per line. Do not include lease liabilities. "
     "For cash_and_cash_equivalents, use the closing figure at the bottom of the "
-    "consolidated statement of cash flows. "
+    "consolidated statement of cash flows, not the balance sheet cash figure. "
     "For escrow_in_cash_equivalents, find the note on cash and bank balances and "
     "report only the escrow amount that the note says is INCLUDED in cash and "
-    "cash equivalents. Ignore escrow held in restricted balances that are "
-    "excluded from cash and cash equivalents. Return null if not disclosed. "
+    "cash equivalents. If the note says escrow balances are excluded from cash "
+    "and cash equivalents, or does not mention escrow, return null. If the "
+    "escrow amount in the note uses a different scale than the statements "
+    "(e.g. millions vs thousands), convert it to the statements' scale. "
+    "For borrowings, list every borrowing, bank loan and sukuk line (both "
+    "current and non-current) from the consolidated statement of financial "
+    "position, one entry per line. Do not include lease liabilities or bank "
+    "overdrafts. "
     "If the statement of financial position does not print a total for "
     "current assets, current liabilities or total liabilities, return null for "
     "that field. Never add these up yourself. "
     "For every item, give its label exactly as printed, the physical PDF page "
     "and the printed page number."
 )
-
 
 
 def extract_raw(pdf_path: str, company_name: str, year: int) -> dict:
@@ -98,7 +108,6 @@ def extract_raw(pdf_path: str, company_name: str, year: int) -> dict:
         except errors.ServerError as e:
             print(f"Server error: {str(e)[:200]}")
             wait = 20 * attempt
-            
             print(f"Gemini is busy (attempt {attempt}/5). Retrying in {wait}s...")
             time.sleep(wait)
     else:

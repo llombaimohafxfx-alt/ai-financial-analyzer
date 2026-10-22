@@ -1,0 +1,121 @@
+{
+  "currency": "AED",
+  "scale": "thousands",
+  "revenue_current": {
+    "label_in_document": "Revenue",
+    "value": 49557263,
+    "pdf_page": 167,
+    "printed_page": "165"
+  },
+  "revenue_prior": {
+    "label_in_document": "Revenue",
+    "value": 35504920,
+    "pdf_page": 167,
+    "printed_page": "165"
+  },
+  "profit_before_tax": {
+    "label_in_document": "PROFIT BEFORE TAX",
+    "value": 25656434,
+    "pdf_page": 167,
+    "printed_page": "165"
+  },
+  "finance_costs": {
+    "label_in_document": "Finance costs",
+    "value": 1028146,
+    "pdf_page": 167,
+    "printed_page": "165"
+  },
+  "finance_income": {
+    "label_in_document": "Finance income",
+    "value": 2812580,
+    "pdf_page": 167,
+    "printed_page": "165"
+  },
+  "net_profit": {
+    "label_in_document": "NET PROFIT FOR THE YEAR",
+    "value": 22325535,
+    "pdf_page": 167,
+    "printed_page": "165"
+  },
+  "net_profit_attributable_to_owners": {
+    "label_in_document": "Owners of the parent",
+    "value": 17599179,
+    "pdf_page": 167,
+    "printed_page": "165"
+  },
+  "depreciation_amortisation": [
+    {
+      "label_in_document": "Depreciation (including right-of use assets)",
+      "value": 1634920,
+      "pdf_page": 170,
+      "printed_page": "168"
+    },
+    {
+      "label_in_document": "Amortisation of intangible assets",
+      "value": 53760,
+      "pdf_page": 170,
+      "printed_page": "168"
+    }
+  ],
+  "operating_cash_flow": {
+    "label_in_document": "Net cash flows from operating activities",
+    "value": 33458369,
+    "pdf_page": 170,
+    "printed_page": "168"
+  },
+  "cash_and_cash_equivalents": {
+    "label_in_document": "Cash and cash equivalents at the end of the year",
+    "value": 52632912,
+    "pdf_page": 170,
+    "printed_page": "168"
+  },
+  "escrow_in_cash_equivalents": {
+    "label_in_document": "advances received from customers against sale of development properties which are deposited into escrow accounts",
+    "value": 42878923,
+    "pdf_page": 193,
+    "printed_page": "191"
+  },
+  "total_assets": {
+    "label_in_document": "TOTAL ASSETS",
+    "value": 186700687,
+    "pdf_page": 168,
+    "printed_page": "166"
+  },
+  "total_liabilities": {
+    "label_in_document": "TOTAL LIABILITIES",
+    "value": 79024380,
+    "pdf_page": 168,
+    "printed_page": "166"
+  },
+  "total_equity": {
+    "label_in_document": "TOTAL EQUITY",
+    "value": 107676307,
+    "pdf_page": 168,
+    "printed_page": "166"
+  },
+  "equity_attributable_to_owners": {
+    "label_in_document": "Equity attributable to owners of the Company",
+    "value": 94278017,
+    "pdf_page": 168,
+    "printed_page": "166"
+  },
+  "borrowings": [
+    {
+      "label_in_document": "Interest-bearing loans and borrowings",
+      "value": 3382174,
+      "pdf_page": 168,
+      "printed_page": "166"
+    },
+    {
+      "label_in_document": "Sukuk",
+      "value": 6423929,
+      "pdf_page": 168,
+      "printed_page": "166"
+    }
+  ],
+  "current_assets": null,
+  "current_liabilities": null,
+  "company": "Emaar Properties",
+  "fiscal_year": 2025,
+  "model": "gemini-3.5-flash"
+}

@@ -1,0 +1,116 @@
+{
+  "currency": "AED",
+  "scale": "thousands",
+  "revenue_current": {
+    "label_in_document": "Revenue",
+    "value": 1972114,
+    "pdf_page": 56,
+    "printed_page": "11"
+  },
+  "revenue_prior": {
+    "label_in_document": "Revenue",
+    "value": 1512794,
+    "pdf_page": 56,
+    "printed_page": "11"
+  },
+  "profit_before_tax": {
+    "label_in_document": "Profit for the year before tax expense",
+    "value": 637862,
+    "pdf_page": 56,
+    "printed_page": "11"
+  },
+  "finance_costs": {
+    "label_in_document": "Finance cost",
+    "value": 57765,
+    "pdf_page": 56,
+    "printed_page": "11"
+  },
+  "finance_income": {
+    "label_in_document": "Finance income",
+    "value": 37525,
+    "pdf_page": 56,
+    "printed_page": "11"
+  },
+  "net_profit": {
+    "label_in_document": "Profit for the year",
+    "value": 602205,
+    "pdf_page": 56,
+    "printed_page": "11"
+  },
+  "net_profit_attributable_to_owners": {
+    "label_in_document": "Equity holders of the Parent",
+    "value": 607541,
+    "pdf_page": 56,
+    "printed_page": "11"
+  },
+  "depreciation_amortisation": [
+    {
+      "label_in_document": "Depreciation on property and equipment",
+      "value": 19705,
+      "pdf_page": 58,
+      "printed_page": "14"
+    },
+    {
+      "label_in_document": "Depreciation on right of use assets",
+      "value": 5444,
+      "pdf_page": 58,
+      "printed_page": "14"
+    }
+  ],
+  "operating_cash_flow": {
+    "label_in_document": "Net cash generated from operating activities",
+    "value": 726899,
+    "pdf_page": 58,
+    "printed_page": "14"
+  },
+  "cash_and_cash_equivalents": {
+    "label_in_document": "CASH AND CASH EQUIVALENTS, END OF THE YEAR",
+    "value": 2096546,
+    "pdf_page": 58,
+    "printed_page": "14"
+  },
+  "escrow_in_cash_equivalents": null,
+  "total_assets": {
+    "label_in_document": "Total assets",
+    "value": 8027554,
+    "pdf_page": 56,
+    "printed_page": "10"
+  },
+  "total_liabilities": {
+    "label_in_document": "Total liabilities",
+    "value": 2356907,
+    "pdf_page": 56,
+    "printed_page": "10"
+  },
+  "total_equity": {
+    "label_in_document": "Total equity",
+    "value": 5670647,
+    "pdf_page": 56,
+    "printed_page": "10"
+  },
+  "equity_attributable_to_owners": {
+    "label_in_document": "Attributable to equity holders of the parent",
+    "value": 5629457,
+    "pdf_page": 57,
+    "printed_page": "13"
+  },
+  "borrowings": [
+    {
+      "label_in_document": "Borrowings",
+      "value": 343841,
+      "pdf_page": 56,
+      "printed_page": "10"
+    },
+    {
+      "label_in_document": "Borrowings",
+      "value": 60000,
+      "pdf_page": 56,
+      "printed_page": "10"
+    }
+  ],
+  "current_assets": null,
+  "current_liabilities": null,
+  "company": "Deyaar Development",
+  "fiscal_year": 2025,
+  "model": "gemini-3.5-flash"
+}

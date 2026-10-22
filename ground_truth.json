@@ -1,29 +1,44 @@
 {
   "aldar_2025": {
     "revenue_current": 33818316,
-    "revenue_prior": 22998382,
-    "profit_before_tax": 9964167,
-    "finance_costs": 1396981,
-    "finance_income": 847883,
     "net_profit": 8833581,
-    "net_profit_attributable_to_owners": 7610886,
-    "depreciation_amortisation": 717179,
     "cash_and_cash_equivalents": 14161060,
-    "escrow_in_cash_equivalents": 11819651,
-    "equity_attributable_to_owners": 40747195,
-    "borrowings": 25187188
+    "borrowings": 25187188,
+    "escrow_in_cash_equivalents": 11819651
   },
   "emaar_2025": {
     "revenue_current": 49557263,
-    "revenue_prior": 35504920,
-    "profit_before_tax": 25656434,
-    "finance_costs": 1028146,
-    "finance_income": 2812580,
     "net_profit": 22325535,
-    "depreciation_amortisation": 1688680,
     "cash_and_cash_equivalents": 52632912,
-    "escrow_in_cash_equivalents": 42878923,
-    "equity_attributable_to_owners": 94278017,
-    "borrowings": 9806103
+    "borrowings": 9806103,
+    "escrow_in_cash_equivalents": 42878923
+  },
+  "deyaar_2025": {
+    "revenue_current": 1972114,
+    "net_profit": 602205,
+    "cash_and_cash_equivalents": 2096546,
+    "borrowings": 403841,
+    "escrow_in_cash_equivalents": 1866500
+  },
+  "union_2025": {
+    "revenue_current": 736882,
+    "net_profit": 462457,
+    "cash_and_cash_equivalents": 331657,
+    "borrowings": 297733,
+    "escrow_in_cash_equivalents": null
+  },
+  "rak_2025": {
+    "revenue_current": 1837449,
+    "net_profit": 404302,
+    "cash_and_cash_equivalents": 235503,
+    "borrowings": 1010965,
+    "escrow_in_cash_equivalents": null
+  },
+  "daralarkan_2025": {
+    "revenue_current": 3899802,
+    "net_profit": 1133920,
+    "cash_and_cash_equivalents": 7480422,
+    "borrowings": 15854447,
+    "escrow_in_cash_equivalents": null
   }
 }

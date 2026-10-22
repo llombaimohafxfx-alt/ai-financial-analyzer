@@ -1,7 +1,7 @@
 import json
 from pathlib import Path
 
-TOLERANCE = 0.5  # allows tiny rounding differences (in AED thousand)
+TOLERANCE = 0.5  # allows tiny rounding differences
 
 
 def get_value(raw: dict, field: str):
@@ -30,11 +30,14 @@ def main():
 
         for field, expected in expected_fields.items():
             got = get_value(raw, field)
-            ok = got is not None and abs(got - expected) <= TOLERANCE
+            if expected is None:
+                ok = got is None
+            else:
+                ok = got is not None and abs(got - expected) <= TOLERANCE
             total += 1
             correct += ok
             mark = "OK  " if ok else "FAIL"
-            print(f"  [{mark}] {field}: expected {expected:,.0f}, got {got}")
+            print(f"  [{mark}] {field}: expected {expected}, got {got}")
 
     if total:
         print(f"\nAccuracy: {correct}/{total} = {correct / total:.1%}")

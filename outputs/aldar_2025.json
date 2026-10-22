@@ -1,0 +1,137 @@
+{
+  "currency": "AED",
+  "scale": "thousands",
+  "revenue_current": {
+    "label_in_document": "Revenue and rental income",
+    "value": 33818316,
+    "pdf_page": 13,
+    "printed_page": "11"
+  },
+  "revenue_prior": {
+    "label_in_document": "Revenue and rental income",
+    "value": 22998382,
+    "pdf_page": 13,
+    "printed_page": "11"
+  },
+  "profit_before_tax": {
+    "label_in_document": "Profit before tax",
+    "value": 9964167,
+    "pdf_page": 13,
+    "printed_page": "11"
+  },
+  "finance_costs": {
+    "label_in_document": "Finance costs",
+    "value": 1396981,
+    "pdf_page": 13,
+    "printed_page": "11"
+  },
+  "finance_income": {
+    "label_in_document": "Finance income",
+    "value": 847883,
+    "pdf_page": 13,
+    "printed_page": "11"
+  },
+  "net_profit": {
+    "label_in_document": "Profit for the year",
+    "value": 8833581,
+    "pdf_page": 13,
+    "printed_page": "11"
+  },
+  "net_profit_attributable_to_owners": {
+    "label_in_document": "Equity holders of the Company",
+    "value": 7610886,
+    "pdf_page": 13,
+    "printed_page": "11"
+  },
+  "depreciation_amortisation": [
+    {
+      "label_in_document": "Depreciation and amortisation",
+      "value": 717179,
+      "pdf_page": 17,
+      "printed_page": "15"
+    }
+  ],
+  "operating_cash_flow": {
+    "label_in_document": "Net cash flows from operating activities",
+    "value": 8226223,
+    "pdf_page": 17,
+    "printed_page": "15"
+  },
+  "cash_and_cash_equivalents": {
+    "label_in_document": "Cash and cash equivalents at 31 December",
+    "value": 14161060,
+    "pdf_page": 18,
+    "printed_page": "16"
+  },
+  "escrow_in_cash_equivalents": {
+    "label_in_document": "escrow accounts",
+    "value": 11819651,
+    "pdf_page": 87,
+    "printed_page": "85"
+  },
+  "total_assets": {
+    "label_in_document": "Total assets",
+    "value": 109574490,
+    "pdf_page": 11,
+    "printed_page": "9"
+  },
+  "total_liabilities": {
+    "label_in_document": "Total liabilities",
+    "value": 60822500,
+    "pdf_page": 12,
+    "printed_page": "10"
+  },
+  "total_equity": {
+    "label_in_document": "Total equity",
+    "value": 48751990,
+    "pdf_page": 11,
+    "printed_page": "9"
+  },
+  "equity_attributable_to_owners": {
+    "label_in_document": "Equity attributable to equity holders of the Company",
+    "value": 40747195,
+    "pdf_page": 11,
+    "printed_page": "9"
+  },
+  "borrowings": [
+    {
+      "label_in_document": "Non-convertible sukuks and dated hybrid notes",
+      "value": 14017121,
+      "pdf_page": 12,
+      "printed_page": "10"
+    },
+    {
+      "label_in_document": "Bank borrowings",
+      "value": 9857438,
+      "pdf_page": 12,
+      "printed_page": "10"
+    },
+    {
+      "label_in_document": "Non-convertible sukuks and dated hybrid notes",
+      "value": 144500,
+      "pdf_page": 12,
+      "printed_page": "10"
+    },
+    {
+      "label_in_document": "Bank borrowings",
+      "value": 1168129,
+      "pdf_page": 12,
+      "printed_page": "10"
+    }
+  ],
+  "current_assets": {
+    "label_in_document": "Total current assets",
+    "value": 62946397,
+    "pdf_page": 11,
+    "printed_page": "9"
+  },
+  "current_liabilities": {
+    "label_in_document": "Total current liabilities",
+    "value": 29898042,
+    "pdf_page": 12,
+    "printed_page": "10"
+  },
+  "company": "Aldar Properties",
+  "fiscal_year": 2025,
+  "model": "gemini-3.5-flash"
+}

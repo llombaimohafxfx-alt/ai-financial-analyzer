@@ -1,0 +1,137 @@
+{
+  "currency": "AED",
+  "scale": "thousands",
+  "revenue_current": {
+    "label_in_document": "Revenue",
+    "value": 736882,
+    "pdf_page": 13,
+    "printed_page": "11"
+  },
+  "revenue_prior": {
+    "label_in_document": "Revenue",
+    "value": 528752,
+    "pdf_page": 13,
+    "printed_page": "11"
+  },
+  "profit_before_tax": {
+    "label_in_document": "Profit before tax for the year",
+    "value": 508409,
+    "pdf_page": 13,
+    "printed_page": "11"
+  },
+  "finance_costs": {
+    "label_in_document": "Finance costs",
+    "value": 29789,
+    "pdf_page": 13,
+    "printed_page": "11"
+  },
+  "finance_income": {
+    "label_in_document": "Finance income",
+    "value": 2943,
+    "pdf_page": 13,
+    "printed_page": "11"
+  },
+  "net_profit": {
+    "label_in_document": "Profit for the year",
+    "value": 462457,
+    "pdf_page": 13,
+    "printed_page": "11"
+  },
+  "net_profit_attributable_to_owners": {
+    "label_in_document": "Profit for the year",
+    "value": 462457,
+    "pdf_page": 13,
+    "printed_page": "11"
+  },
+  "depreciation_amortisation": [
+    {
+      "label_in_document": "Depreciation of property, plant and equipement",
+      "value": 20327,
+      "pdf_page": 15,
+      "printed_page": "13"
+    },
+    {
+      "label_in_document": "Depreciation of right of use assets",
+      "value": 4015,
+      "pdf_page": 15,
+      "printed_page": "13"
+    },
+    {
+      "label_in_document": "Amortisation of intangibles",
+      "value": 3694,
+      "pdf_page": 15,
+      "printed_page": "13"
+    }
+  ],
+  "operating_cash_flow": {
+    "label_in_document": "Net cash generated from/used in operating activities",
+    "value": 258310,
+    "pdf_page": 15,
+    "printed_page": "13"
+  },
+  "cash_and_cash_equivalents": {
+    "label_in_document": "Cash and cash equivalents at the end of the year",
+    "value": 331657,
+    "pdf_page": 15,
+    "printed_page": "13"
+  },
+  "escrow_in_cash_equivalents": {
+    "label_in_document": "- in escrow accounts",
+    "value": 132008,
+    "pdf_page": 60,
+    "printed_page": "58"
+  },
+  "total_assets": {
+    "label_in_document": "Total assets",
+    "value": 4799747,
+    "pdf_page": 14,
+    "printed_page": "12"
+  },
+  "total_liabilities": {
+    "label_in_document": "Total liabilities",
+    "value": 1146501,
+    "pdf_page": 14,
+    "printed_page": "12"
+  },
+  "total_equity": {
+    "label_in_document": "Total equity",
+    "value": 3653246,
+    "pdf_page": 14,
+    "printed_page": "12"
+  },
+  "equity_attributable_to_owners": {
+    "label_in_document": "Total equity",
+    "value": 3653246,
+    "pdf_page": 14,
+    "printed_page": "12"
+  },
+  "borrowings": [
+    {
+      "label_in_document": "Non-current portion of bank loans",
+      "value": 231680,
+      "pdf_page": 14,
+      "printed_page": "12"
+    },
+    {
+      "label_in_document": "Current portion of bank loans",
+      "value": 66053,
+      "pdf_page": 14,
+      "printed_page": "12"
+    }
+  ],
+  "current_assets": {
+    "label_in_document": "Total current assets",
+    "value": 1629480,
+    "pdf_page": 14,
+    "printed_page": "12"
+  },
+  "current_liabilities": {
+    "label_in_document": "Total current liabilities",
+    "value": 798497,
+    "pdf_page": 14,
+    "printed_page": "12"
+  },
+  "company": "Union Properties",
+  "fiscal_year": 2025,
+  "model": "gemini-3.5-flash"
+}

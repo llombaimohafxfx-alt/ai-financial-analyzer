@@ -1,0 +1,126 @@
+{
+  "currency": "AED",
+  "scale": "thousands",
+  "revenue_current": {
+    "label_in_document": "Revenue",
+    "value": 1837449,
+    "pdf_page": 16,
+    "printed_page": "13"
+  },
+  "revenue_prior": {
+    "label_in_document": "Revenue",
+    "value": 1406318,
+    "pdf_page": 16,
+    "printed_page": "13"
+  },
+  "profit_before_tax": {
+    "label_in_document": "PROFIT FOR THE YEAR BEFORE TAX",
+    "value": 443831,
+    "pdf_page": 16,
+    "printed_page": "13"
+  },
+  "finance_costs": {
+    "label_in_document": "Finance costs",
+    "value": 74359,
+    "pdf_page": 16,
+    "printed_page": "13"
+  },
+  "finance_income": {
+    "label_in_document": "Finance income",
+    "value": 18314,
+    "pdf_page": 16,
+    "printed_page": "13"
+  },
+  "net_profit": {
+    "label_in_document": "NET PROFIT FOR THE YEAR AFTER TAX",
+    "value": 404302,
+    "pdf_page": 16,
+    "printed_page": "13"
+  },
+  "net_profit_attributable_to_owners": {
+    "label_in_document": "NET PROFIT FOR THE YEAR AFTER TAX",
+    "value": 404302,
+    "pdf_page": 16,
+    "printed_page": "13"
+  },
+  "depreciation_amortisation": [
+    {
+      "label_in_document": "Depreciation",
+      "value": 70370,
+      "pdf_page": 17,
+      "printed_page": "16"
+    },
+    {
+      "label_in_document": "Amortisation of government grant",
+      "value": 13844,
+      "pdf_page": 17,
+      "printed_page": "16"
+    }
+  ],
+  "operating_cash_flow": {
+    "label_in_document": "Net cash flows generated from operating activities",
+    "value": 231209,
+    "pdf_page": 17,
+    "printed_page": "16"
+  },
+  "cash_and_cash_equivalents": {
+    "label_in_document": "Cash and cash equivalents at the end of the year",
+    "value": 235503,
+    "pdf_page": 17,
+    "printed_page": "16"
+  },
+  "escrow_in_cash_equivalents": null,
+  "total_assets": {
+    "label_in_document": "TOTAL ASSETS",
+    "value": 8706168,
+    "pdf_page": 15,
+    "printed_page": "12"
+  },
+  "total_liabilities": {
+    "label_in_document": "Total liablilities",
+    "value": 2764198,
+    "pdf_page": 15,
+    "printed_page": "12"
+  },
+  "total_equity": {
+    "label_in_document": "Total equity",
+    "value": 5941970,
+    "pdf_page": 15,
+    "printed_page": "12"
+  },
+  "equity_attributable_to_owners": {
+    "label_in_document": "Total equity",
+    "value": 5941970,
+    "pdf_page": 15,
+    "printed_page": "12"
+  },
+  "borrowings": [
+    {
+      "label_in_document": "Bank borrowings",
+      "value": 569003,
+      "pdf_page": 15,
+      "printed_page": "12"
+    },
+    {
+      "label_in_document": "Bank borrowings",
+      "value": 441962,
+      "pdf_page": 15,
+      "printed_page": "12"
+    }
+  ],
+  "current_assets": {
+    "label_in_document": "Total current assets",
+    "value": 2318138,
+    "pdf_page": 15,
+    "printed_page": "12"
+  },
+  "current_liabilities": {
+    "label_in_document": "Total current liabilities",
+    "value": 1140809,
+    "pdf_page": 15,
+    "printed_page": "12"
+  },
+  "company": "RAK Properties",
+  "fiscal_year": 2025,
+  "model": "gemini-3.5-flash"
+}

@@ -75,9 +75,10 @@
     "pdf_page": 15,
     "printed_page": "13"
   },
-  "escrow_in_cash_equivalents": {
-    "label_in_document": "- in escrow accounts",
-    "value": 132008,
+  "escrow": {
+    "amount": 132008,
+    "included_in_cash_equivalents": false,
+    "evidence_quote": "Balance held in escrow account represents advance collections from customers that are held with banks authorised by the Real Estate Regulatory Authority (\u201cRERA\u201d), Dubai, United Arab Emirates.",
     "pdf_page": 60,
     "printed_page": "58"
   },
@@ -131,6 +132,7 @@
     "pdf_page": 14,
     "printed_page": "12"
   },
+  "escrow_in_cash_equivalents": null,
   "company": "Union Properties",
   "fiscal_year": 2025,
   "model": "gemini-3.5-flash"

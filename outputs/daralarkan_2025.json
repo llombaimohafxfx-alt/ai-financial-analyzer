@@ -33,7 +33,7 @@
     "printed_page": "128"
   },
   "net_profit_attributable_to_owners": {
-    "label_in_document": "Dar Al Arkan shareholders",
+    "label_in_document": "Net profit attributable to Dar Al Arkan shareholders",
     "value": 1134182,
     "pdf_page": 128,
     "printed_page": "128"
@@ -58,7 +58,7 @@
     "pdf_page": 129,
     "printed_page": "129"
   },
-  "escrow_in_cash_equivalents": null,
+  "escrow": null,
   "total_assets": {
     "label_in_document": "TOTAL ASSETS",
     "value": 41612961,
@@ -109,6 +109,7 @@
     "pdf_page": 128,
     "printed_page": "128"
   },
+  "escrow_in_cash_equivalents": null,
   "company": "Dar Al Arkan",
   "fiscal_year": 2025,
   "model": "gemini-3.5-flash"

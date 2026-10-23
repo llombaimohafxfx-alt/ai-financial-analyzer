@@ -69,9 +69,10 @@
     "pdf_page": 170,
     "printed_page": "168"
   },
-  "escrow_in_cash_equivalents": {
-    "label_in_document": "advances received from customers against sale of development properties which are deposited into escrow accounts",
-    "value": 42878923,
+  "escrow": {
+    "amount": 42878923,
+    "included_in_cash_equivalents": true,
+    "evidence_quote": "As at the reporting date, cash and cash equivalent include AED 42,878,923 thousand (2024: AED 30,755,249 thousand) representing advances received from customers against sale of development properties which are deposited into escrow accounts.",
     "pdf_page": 193,
     "printed_page": "191"
   },
@@ -115,6 +116,12 @@
   ],
   "current_assets": null,
   "current_liabilities": null,
+  "escrow_in_cash_equivalents": {
+    "label_in_document": "As at the reporting date, cash and cash equivalent include AED 42,878,923 thousand (2024: AED 30,755,249 thousand) representing advances received from customers against sale of development properties which are deposited into escrow accounts.",
+    "value": 42878923,
+    "pdf_page": 193,
+    "printed_page": "191"
+  },
   "company": "Emaar Properties",
   "fiscal_year": 2025,
   "model": "gemini-3.5-flash"

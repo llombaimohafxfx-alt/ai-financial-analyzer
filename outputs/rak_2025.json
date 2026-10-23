@@ -69,7 +69,7 @@
     "pdf_page": 17,
     "printed_page": "16"
   },
-  "escrow_in_cash_equivalents": null,
+  "escrow": null,
   "total_assets": {
     "label_in_document": "TOTAL ASSETS",
     "value": 8706168,
@@ -120,6 +120,7 @@
     "pdf_page": 15,
     "printed_page": "12"
   },
+  "escrow_in_cash_equivalents": null,
   "company": "RAK Properties",
   "fiscal_year": 2025,
   "model": "gemini-3.5-flash"

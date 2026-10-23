@@ -21,6 +21,14 @@ class LineItem(BaseModel):
     printed_page: str
 
 
+class EscrowDisclosure(BaseModel):
+    amount: float                       # in the statements' scale
+    included_in_cash_equivalents: bool  # decided from the reconciliation table
+    evidence_quote: str                 # exact sentence or table line from the report
+    pdf_page: int
+    printed_page: str
+
+
 class RawFinancials(BaseModel):
     currency: str
     scale: Literal["units", "thousands", "millions"]
@@ -36,7 +44,7 @@ class RawFinancials(BaseModel):
     depreciation_amortisation: list[LineItem]
     operating_cash_flow: LineItem
     cash_and_cash_equivalents: LineItem
-    escrow_in_cash_equivalents: Optional[LineItem] = None
+    escrow: Optional[EscrowDisclosure] = None
     # Balance sheet
     total_assets: LineItem
     total_liabilities: Optional[LineItem] = None
@@ -66,12 +74,17 @@ PROMPT = (
     "flows, one entry per line. "
     "For cash_and_cash_equivalents, use the closing figure at the bottom of the "
     "consolidated statement of cash flows, not the balance sheet cash figure. "
-    "For escrow_in_cash_equivalents, find the note on cash and bank balances and "
-    "report only the escrow amount that the note says is INCLUDED in cash and "
-    "cash equivalents. If the note says escrow balances are excluded from cash "
-    "and cash equivalents, or does not mention escrow, return null. If the "
-    "escrow amount in the note uses a different scale than the statements "
-    "(e.g. millions vs thousands), convert it to the statements' scale. "
+    "For escrow, read the note on cash and bank balances. If it discloses cash "
+    "held in escrow accounts from customer advances on property sales, report "
+    "the amount (converted to the statements' scale if the note uses a "
+    "different scale), copy the exact sentence or table line that discloses it "
+    "as evidence_quote, and set included_in_cash_equivalents. To decide "
+    "inclusion, use the reconciliation from cash and bank balances to cash and "
+    "cash equivalents: escrow is included only if the cash and cash "
+    "equivalents total is NOT reduced by the escrow amount. If the wording of "
+    "the note and the reconciliation disagree, follow the reconciliation. "
+    "Ignore escrow held on behalf of third parties that is not part of the "
+    "group's bank balances. If no escrow is disclosed, return null. "
     "For borrowings, list every borrowing, bank loan and sukuk line (both "
     "current and non-current) from the consolidated statement of financial "
     "position, one entry per line. Do not include lease liabilities or bank "
@@ -114,6 +127,19 @@ def extract_raw(pdf_path: str, company_name: str, year: int) -> dict:
         raise RuntimeError("Gemini unavailable after 5 attempts. Try again later.")
 
     data = json.loads(response.text)
+
+    # Python, not the AI, decides which escrow figure the analysis uses.
+    escrow = data.get("escrow")
+    if escrow and escrow["included_in_cash_equivalents"]:
+        data["escrow_in_cash_equivalents"] = {
+            "label_in_document": escrow["evidence_quote"],
+            "value": escrow["amount"],
+            "pdf_page": escrow["pdf_page"],
+            "printed_page": escrow["printed_page"],
+        }
+    else:
+        data["escrow_in_cash_equivalents"] = None
+
     data["company"] = company_name
     data["fiscal_year"] = year
     data["model"] = MODEL

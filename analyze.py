@@ -61,8 +61,10 @@ def compute_metrics(raw: dict) -> dict:
         metrics["escrow_cash"] = escrow_item["value"]
         metrics["net_debt_excl_escrow"] = net_debt_excl_escrow
         metrics["net_debt_to_ebitda_excl_escrow"] = round(net_debt_excl_escrow / ebitda, 2)
+    elif raw.get("escrow"):
+        metrics["net_debt_excl_escrow"] = "escrow disclosed but excluded from cash equivalents"
     else:
-        metrics["net_debt_excl_escrow"] = "no escrow in cash equivalents"
+        metrics["net_debt_excl_escrow"] = "NOT FOUND - verify escrow manually"
 
     if raw.get("current_assets") and raw.get("current_liabilities"):
         metrics["current_ratio"] = round(

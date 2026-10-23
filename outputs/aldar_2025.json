@@ -63,9 +63,10 @@
     "pdf_page": 18,
     "printed_page": "16"
   },
-  "escrow_in_cash_equivalents": {
-    "label_in_document": "escrow accounts",
-    "value": 11819651,
+  "escrow": {
+    "amount": 11819651,
+    "included_in_cash_equivalents": true,
+    "evidence_quote": "Cash and cash equivalents include balances amounting to AED 11,819,651 thousand (2024: AED 8,040,823 thousand) which are deposited into escrow accounts representing cash received from customers against sale of development properties, which also include certain balances against which the Group has provided performance bonds and are available to the Group on demand.",
     "pdf_page": 87,
     "printed_page": "85"
   },
@@ -130,6 +131,12 @@
     "value": 29898042,
     "pdf_page": 12,
     "printed_page": "10"
+  },
+  "escrow_in_cash_equivalents": {
+    "label_in_document": "Cash and cash equivalents include balances amounting to AED 11,819,651 thousand (2024: AED 8,040,823 thousand) which are deposited into escrow accounts representing cash received from customers against sale of development properties, which also include certain balances against which the Group has provided performance bonds and are available to the Group on demand.",
+    "value": 11819651,
+    "pdf_page": 87,
+    "printed_page": "85"
   },
   "company": "Aldar Properties",
   "fiscal_year": 2025,

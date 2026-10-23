@@ -29,6 +29,8 @@ def compute_metrics(raw: dict) -> dict:
     finance_income = raw["finance_income"]["value"] if raw.get("finance_income") else 0
     net_finance_cost = raw["finance_costs"]["value"] - finance_income
     ebitda = raw["profit_before_tax"]["value"] + net_finance_cost + da_total
+    adjustments = sum(a["signed_value"] for a in raw.get("profit_adjustments", []))
+    adjusted_ebitda = ebitda - adjustments
 
     borrowings = total(raw["borrowings"])
     cash = raw["cash_and_cash_equivalents"]["value"]
@@ -42,6 +44,9 @@ def compute_metrics(raw: dict) -> dict:
         "revenue_growth_pct": round((revenue / revenue_prior - 1) * 100, 2),
         "ebitda": ebitda,
         "ebitda_margin_pct": round(ebitda / revenue * 100, 2),
+        "adjusted_ebitda": adjusted_ebitda,
+        "adjusted_ebitda_margin_pct": round(adjusted_ebitda / revenue * 100, 2),
+        "non_recurring_share_of_ebitda_pct": round(adjustments / ebitda * 100, 1),
         "net_margin_pct": round(net_profit / revenue * 100, 2),
         "total_borrowings": borrowings,
         "cash": cash,
@@ -84,7 +89,7 @@ def compute_metrics(raw: dict) -> dict:
 
     # Convert absolute amounts to AED millions so companies can be compared.
     factor = SCALE_TO_MILLIONS[raw["scale"]] * TO_AED[raw["currency"]]
-    for key in ["ebitda", "total_borrowings", "cash", "net_debt",
+    for key in ["ebitda", "adjusted_ebitda", "total_borrowings", "cash", "net_debt",
                 "escrow_cash", "net_debt_excl_escrow"]:
         if isinstance(metrics.get(key), (int, float)):
             metrics[key] = round(metrics[key] * factor, 1)

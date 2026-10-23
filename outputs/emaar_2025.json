@@ -43,6 +43,15 @@
     "pdf_page": 167,
     "printed_page": "165"
   },
+  "profit_adjustments": [
+    {
+      "label_in_document": "Share of results of associates and joint ventures",
+      "signed_value": 800868,
+      "category": "associates_jv",
+      "pdf_page": 167,
+      "printed_page": "165"
+    }
+  ],
   "depreciation_amortisation": [
     {
       "label_in_document": "Depreciation (including right-of use assets)",
@@ -124,5 +133,5 @@
   },
   "company": "Emaar Properties",
   "fiscal_year": 2025,
-  "model": "gemini-3.5-flash"
+  "model": "gemini-3.8-flash"
 }

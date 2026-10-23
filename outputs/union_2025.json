@@ -43,6 +43,36 @@
     "pdf_page": 13,
     "printed_page": "11"
   },
+  "profit_adjustments": [
+    {
+      "label_in_document": "Gain on sale of investment property held for sale",
+      "signed_value": 144375,
+      "category": "property_disposal",
+      "pdf_page": 13,
+      "printed_page": "11"
+    },
+    {
+      "label_in_document": "Gain on sale of investment properties",
+      "signed_value": 144479,
+      "category": "property_disposal",
+      "pdf_page": 13,
+      "printed_page": "11"
+    },
+    {
+      "label_in_document": "Gain on valuation of investment properties, net",
+      "signed_value": 275487,
+      "category": "fair_value",
+      "pdf_page": 13,
+      "printed_page": "11"
+    },
+    {
+      "label_in_document": "Share of results of equity accounted investees",
+      "signed_value": -2306,
+      "category": "associates_jv",
+      "pdf_page": 13,
+      "printed_page": "11"
+    }
+  ],
   "depreciation_amortisation": [
     {
       "label_in_document": "Depreciation of property, plant and equipement",
@@ -78,7 +108,7 @@
   "escrow": {
     "amount": 132008,
     "included_in_cash_equivalents": false,
-    "evidence_quote": "Balance held in escrow account represents advance collections from customers that are held with banks authorised by the Real Estate Regulatory Authority (\u201cRERA\u201d), Dubai, United Arab Emirates.",
+    "evidence_quote": "- in escrow accounts 132,008 31,166",
     "pdf_page": 60,
     "printed_page": "58"
   },
@@ -135,5 +165,5 @@
   "escrow_in_cash_equivalents": null,
   "company": "Union Properties",
   "fiscal_year": 2025,
-  "model": "gemini-3.5-flash"
+  "model": "gemini-3.8-flash"
 }

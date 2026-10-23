@@ -43,16 +43,33 @@
     "pdf_page": 16,
     "printed_page": "13"
   },
+  "profit_adjustments": [
+    {
+      "label_in_document": "Net change in fair value of investment properties",
+      "signed_value": 44765,
+      "category": "fair_value",
+      "pdf_page": 16,
+      "printed_page": "13"
+    },
+    {
+      "label_in_document": "Share of profit in joint ventures",
+      "signed_value": 6074,
+      "category": "associates_jv",
+      "pdf_page": 16,
+      "printed_page": "13"
+    },
+    {
+      "label_in_document": "Gain on sale of investment properties",
+      "signed_value": 5909,
+      "category": "property_disposal",
+      "pdf_page": 16,
+      "printed_page": "13"
+    }
+  ],
   "depreciation_amortisation": [
     {
       "label_in_document": "Depreciation",
       "value": 70370,
-      "pdf_page": 17,
-      "printed_page": "16"
-    },
-    {
-      "label_in_document": "Amortisation of government grant",
-      "value": 13844,
       "pdf_page": 17,
       "printed_page": "16"
     }
@@ -123,5 +140,5 @@
   "escrow_in_cash_equivalents": null,
   "company": "RAK Properties",
   "fiscal_year": 2025,
-  "model": "gemini-3.5-flash"
+  "model": "gemini-3.8-flash"
 }

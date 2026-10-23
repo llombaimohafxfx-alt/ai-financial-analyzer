@@ -11,7 +11,7 @@ from pydantic import BaseModel
 load_dotenv()
 client = genai.Client(api_key=os.environ["GEMINI_API_KEY"])
 OUTPUT_DIR = Path("outputs")
-MODEL = "gemini-3.5-flash"
+MODEL = "gemini-3.7-flash"
 
 
 class LineItem(BaseModel):
@@ -29,6 +29,14 @@ class EscrowDisclosure(BaseModel):
     printed_page: str
 
 
+class AdjustmentItem(BaseModel):
+    label_in_document: str
+    signed_value: float   # effect on profit: + if it increased profit, - if it reduced it
+    category: Literal["fair_value", "property_disposal", "associates_jv", "property_impairment"]
+    pdf_page: int
+    printed_page: str
+
+
 class RawFinancials(BaseModel):
     currency: str
     scale: Literal["units", "thousands", "millions"]
@@ -40,6 +48,7 @@ class RawFinancials(BaseModel):
     finance_income: Optional[LineItem] = None
     net_profit: LineItem
     net_profit_attributable_to_owners: LineItem
+    profit_adjustments: list[AdjustmentItem]
     # Cash flow statement
     depreciation_amortisation: list[LineItem]
     operating_cash_flow: LineItem
@@ -60,7 +69,8 @@ PROMPT = (
     "{year}, extract the requested line items for the current year. Do NOT "
     "calculate, combine or estimate anything: only copy values exactly as "
     "printed. Report every value as a positive number (ignore parentheses), "
-    "except operating_cash_flow, which must be negative if it is a net outflow. "
+    "except operating_cash_flow, which must be negative if it is a net outflow, "
+    "and the signed_value of profit_adjustments. "
     "For currency, give the ISO code of the presentation currency (e.g. AED, "
     "SAR). For scale, state whether amounts are presented in units, thousands "
     "or millions, as the column headers of the statements say. Keep every "
@@ -69,6 +79,17 @@ PROMPT = (
     "profit and not profit from continuing operations only. "
     "If there is no separate finance income line, return null for "
     "finance_income. "
+    "For profit_adjustments, list every line of the consolidated statement of "
+    "profit or loss that belongs to one of these categories: fair_value (net "
+    "change, gain or loss in fair value of investment properties); "
+    "property_disposal (gain or loss on sale of investment properties or of "
+    "investment properties held for sale); associates_jv (share of results or "
+    "profit of associates and joint ventures); property_impairment (impairment "
+    "charges or reversals on properties, development properties or property "
+    "and equipment). Give signed_value as the effect on profit: positive if the "
+    "line increased profit, negative if it reduced it. Do not include finance "
+    "income, other income, tax or impairments on receivables. If no line "
+    "belongs to these categories, return an empty list. "
     "For depreciation_amortisation, list every depreciation and amortisation "
     "line from the adjustments section of the consolidated statement of cash "
     "flows, one entry per line. "
@@ -142,7 +163,7 @@ def extract_raw(pdf_path: str, company_name: str, year: int) -> dict:
 
     data["company"] = company_name
     data["fiscal_year"] = year
-    data["model"] = MODEL
+    data["model"] = response.model_version or MODEL
     OUTPUT_DIR.mkdir(exist_ok=True)
     cache_file.write_text(json.dumps(data, indent=2))
     return data

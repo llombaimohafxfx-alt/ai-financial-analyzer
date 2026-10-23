@@ -43,6 +43,29 @@
     "pdf_page": 13,
     "printed_page": "11"
   },
+  "profit_adjustments": [
+    {
+      "label_in_document": "Gain on revaluation of investment properties, net",
+      "signed_value": 1305606,
+      "category": "fair_value",
+      "pdf_page": 13,
+      "printed_page": "11"
+    },
+    {
+      "label_in_document": "Gain on disposal of investment properties",
+      "signed_value": 38618,
+      "category": "property_disposal",
+      "pdf_page": 13,
+      "printed_page": "11"
+    },
+    {
+      "label_in_document": "Share of results of associates and joint ventures",
+      "signed_value": 173,
+      "category": "associates_jv",
+      "pdf_page": 13,
+      "printed_page": "11"
+    }
+  ],
   "depreciation_amortisation": [
     {
       "label_in_document": "Depreciation and amortisation",
@@ -140,5 +163,5 @@
   },
   "company": "Aldar Properties",
   "fiscal_year": 2025,
-  "model": "gemini-3.5-flash"
+  "model": "gemini-3.8-flash"
 }

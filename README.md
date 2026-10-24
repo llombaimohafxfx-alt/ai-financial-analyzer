@@ -65,10 +65,10 @@ companies), verified by hand against the PDFs before seeing the model's output.
 |---|---|
 | First run, untuned | 28/30 = 93.3% |
 | After escrow redesign (same companies) | 29/30 = 96.7% |
-| Final run, gemini-3.8-flash (5 companies) | 25/25 = 100% |
+| Final run, gemini-3.8-flash (6 companies) | 30/30 = 100% |
 
-Dar Al Arkan: re-extraction with the final model is pending due to API outages
-(previous model run: 5/5 values correct).
+RAK and Dar Al Arkan are flagged "Not found – verify": a manual check of their
+cash notes confirmed neither discloses escrow balances.
 
 Core figures (revenue, profit, cash, borrowings) were correct in every run. All
 errors were escrow judgements on scanned PDFs. The second and third results are
@@ -85,7 +85,7 @@ real-world accuracy; a fair test needs companies the tool has never seen.
   manual review; the final model found it. Excluding escrow, Deyaar moves from
   AED 1.7bn net cash to AED 174m net debt.
 - **Earnings quality varies widely.** Non-recurring items are 3% of Emaar's
-  EBITDA, 10% of RAK's, 12% of Aldar's and 39% of Deyaar's.
+  EBITDA, 10% of RAK's, 12% of Aldar's, 14% of Dar Al Arkan's and 39% of Deyaar's.
   **Union Properties reports a 76% EBITDA margin, but 99.8% of its EBITDA comes
   from property disposals and revaluations: its adjusted margin is 0.2%.**
 - **Dar Al Arkan** has negative operating cash flow and the highest leverage of

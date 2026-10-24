@@ -1,0 +1,125 @@
+{
+  "currency": "SAR",
+  "scale": "thousands",
+  "revenue_current": {
+    "label_in_document": "Revenue",
+    "value": 3899802,
+    "pdf_page": 128,
+    "printed_page": "128"
+  },
+  "revenue_prior": {
+    "label_in_document": "Revenue",
+    "value": 3759022,
+    "pdf_page": 128,
+    "printed_page": "128"
+  },
+  "profit_before_tax": {
+    "label_in_document": "Profit before zakat from continuing operations",
+    "value": 1354261,
+    "pdf_page": 128,
+    "printed_page": "128"
+  },
+  "finance_costs": {
+    "label_in_document": "Finance costs",
+    "value": 1037479,
+    "pdf_page": 128,
+    "printed_page": "128"
+  },
+  "finance_income": null,
+  "net_profit": {
+    "label_in_document": "Net profit for the year",
+    "value": 1133920,
+    "pdf_page": 128,
+    "printed_page": "128"
+  },
+  "net_profit_attributable_to_owners": {
+    "label_in_document": "Dar Al Arkan shareholders",
+    "value": 1134182,
+    "pdf_page": 128,
+    "printed_page": "128"
+  },
+  "profit_adjustments": [
+    {
+      "label_in_document": "Share of net profits from associates and joint ventures",
+      "signed_value": 337202,
+      "category": "associates_jv",
+      "pdf_page": 128,
+      "printed_page": "128"
+    }
+  ],
+  "depreciation_amortisation": [
+    {
+      "label_in_document": "Depreciation",
+      "value": 53967,
+      "pdf_page": 129,
+      "printed_page": "129"
+    }
+  ],
+  "operating_cash_flow": {
+    "label_in_document": "NET CASH FLOWS (USED IN) / FROM OPERATING ACTIVITIES",
+    "value": -3319216,
+    "pdf_page": 129,
+    "printed_page": "129"
+  },
+  "cash_and_cash_equivalents": {
+    "label_in_document": "CASH AND CASH EQUIVALENTS, END OF THE YEAR",
+    "value": 7480422,
+    "pdf_page": 129,
+    "printed_page": "129"
+  },
+  "escrow": null,
+  "total_assets": {
+    "label_in_document": "TOTAL ASSETS",
+    "value": 41612961,
+    "pdf_page": 128,
+    "printed_page": "128"
+  },
+  "total_liabilities": {
+    "label_in_document": "TOTAL LIABILITIES",
+    "value": 19379875,
+    "pdf_page": 128,
+    "printed_page": "128"
+  },
+  "total_equity": {
+    "label_in_document": "Total shareholders\u2019 equity",
+    "value": 22233086,
+    "pdf_page": 128,
+    "printed_page": "128"
+  },
+  "equity_attributable_to_owners": {
+    "label_in_document": "Equity attributable to equity holders of the parent company",
+    "value": 22227294,
+    "pdf_page": 128,
+    "printed_page": "128"
+  },
+  "borrowings": [
+    {
+      "label_in_document": "Borrowings-non-current portion",
+      "value": 12977621,
+      "pdf_page": 128,
+      "printed_page": "128"
+    },
+    {
+      "label_in_document": "Borrowings-current portion",
+      "value": 2876826,
+      "pdf_page": 128,
+      "printed_page": "128"
+    }
+  ],
+  "current_assets": {
+    "label_in_document": "Total current assets",
+    "value": 11240776,
+    "pdf_page": 128,
+    "printed_page": "128"
+  },
+  "current_liabilities": {
+    "label_in_document": "Total current liabilities",
+    "value": 6360419,
+    "pdf_page": 128,
+    "printed_page": "128"
+  },
+  "escrow_in_cash_equivalents": null,
+  "company": "Dar Al Arkan",
+  "fiscal_year": 2025,
+  "model": "gemini-3.8-flash"
+}
